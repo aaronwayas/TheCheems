@@ -5,7 +5,7 @@ from discord.ext import commands
 
 discord.Intents(guild_messages=True, messages=True, message_content=True)
 bot = commands.Bot(command_prefix='¡', intents=discord.Intents.all())
-token = "MTA4NDIyMDM0MDc0NzYzMjY0MA.GU_SFH.-blsTf8rVd2c863mFnxCmkSFhD1asBEvmcsk-g"
+token = "" # Tu token
 
 intents = discord.Intents.default()
 intents.messages = True
@@ -70,7 +70,7 @@ async def unmute(ctx, member: discord.Member):
 
 
 @bot.command()
-@commands.has_role(1062140047240986664)
+@commands.has_role(1062140047240986664) # ID de rol personalizado
 async def clear(ctx, amount: int):
     """Comando para eliminar mensajes en masa"""
     if amount <= 0:
@@ -82,7 +82,7 @@ async def clear(ctx, amount: int):
 
     channel = ctx.channel
     messages = []
-    async for message in channel.history(limit=amount + 1):  # Se suma 1 para incluir el propio comando
+    async for message in channel.history(limit=amount + 1):  
         messages.append(message)
 
     for message in messages:
@@ -92,16 +92,16 @@ async def clear(ctx, amount: int):
 
 @bot.command()
 async def tiktok(ctx):
-    url = 'https://www.tiktok.com/@gato.bloxfuits' # URL del perfil de TikTok
+    url = '' # URL del perfil de TikTok
     await ctx.send(url)
 
 
 # Comando Help
-@bot.command()
+@bot.command() # Lo puedes personalizar a tu gusto!
 async def help(ctx):
     embed = discord.Embed(title="Ayuda", color=0xFFA500)
     embed.add_field(name="Moderación", value="Comandos de moderación\n!kick - Expulsa a un usuario del servidor\n!ban - Banea a un usuario del servidor\n!unban - Desbanea a un usuario del servidor\n!mute - Mutea a un usuario del servidor\n!unmute - Desmutea a un usuario del servidor", inline=False)
-    embed.add_field(name="Perfil de TikTok", value="!tiktok - Muestra el enlace del perfil de TikTok de Gato", inline=False)
+    embed.add_field(name="Perfil de TikTok", value="!tiktok - Muestra el enlace del perfil de TikTok de ", inline=False)
     await ctx.send(embed=embed)
 
 
