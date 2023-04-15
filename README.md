@@ -11,7 +11,7 @@ El bot tiene los siguientes comandos de moderación:
 - `!kick`: Expulsa a un usuario del servidor. Requiere permisos de `kick_members`.
 - `!mute`: Mutea a un usuario del servidor. Requiere permisos de `manage_roles`.
 - `!unmute`: Desmutea a un usuario del servidor. Requiere permisos de `manage_roles`.
-- `!clear`: Elimina mensajes en masa en un canal. Requiere el rol con ID `1062140047240986664`.
+- `!clear`: Elimina mensajes en masa en un canal. Requiere el rol con administrador en permisos.
 
 ## Código del Bot
 
